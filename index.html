@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div class="game-box">
+        <p class = "heading">Rock Paper Scissors</p>
+            <div class="game">
+            <button onclick="playGame('rock');" class="emoji"><img src="images/rock-emoji.png" alt="Rock"></i></button>
+            <button onclick="playGame('paper'); " class="emoji"><img src="images/paper-emoji.png" alt="Paper"></button>
+            <button onclick="playGame('scissors');" class="emoji"><img src="images/scissors-emoji.png" alt="Scissors"></button>
+                </div>
+            <p class="js-result results">You win</p>
+            <p class="js-moves"></p>
+            <p class = "js-score"></p>
+            <button onclick="
+            score.wins = 0;
+            score.losses = 0;
+            score.ties = 0;
+            localStorage.removeItem('score');
+            updateScoreElement();
+            " class="reset">Reset Score</button>
+    </div>
+        <div class="rules">
+            <ul>
+                <h3>RULES</h3>
+                <li>Rock vs Scissors → Rock wins.</li>
+                <li>Scissors vs Paper → Scissors win.</li>
+                <li>Paper vs Rock → Paper wins.</li>
+                <li>Same choice → Tie.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
